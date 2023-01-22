@@ -21,6 +21,9 @@
     "typeRoots": ["src/types", "node_modules/@types"],
 
     "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["./src/components/*"]
+    }
   },
   "include": ["./jest.*", "./webpack.*", "src/**/*"],
   "exclude": ["node_modules", "src/**/*.spec.ts"]

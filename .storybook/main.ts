@@ -1,3 +1,5 @@
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+
 module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/preset-create-react-app'],
@@ -17,6 +19,10 @@ module.exports = {
       shouldRemoveUndefinedFromOptional: true, // makes string and boolean types that can be undefined appear as inputs and switches
       propFilter: (prop: {parent: {fileName: string}}) => (prop.parent ? !/node_modules\/(?!@mui)/.test(prop.parent.fileName) : true),
     },
+  },
+  webpackFinal: async (config: {resolve: {plugins: TsconfigPathsPlugin[]}}, {configType}: any) => {
+    config.resolve.plugins = [new TsconfigPathsPlugin()];
+    return config;
   },
 };
 
