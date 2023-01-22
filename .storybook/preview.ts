@@ -1,4 +1,4 @@
-import { withMuiTheme } from './with-mui-theme.decorator';
+import {withMuiTheme} from './with-mui-theme.decorator';
 
 // Load Roboto fonts
 import '@fontsource/roboto/300.css';
@@ -8,7 +8,7 @@ import '@fontsource/roboto/700.css';
 import '@fontsource/material-icons';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: {argTypesRegex: '^on[A-Z].*'},
   controls: {
     expanded: true,
     hideNoControlsWarning: true,
@@ -17,7 +17,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
 
 export const globalTypes = {
   theme: {
@@ -29,13 +29,11 @@ export const globalTypes = {
       icon: 'paintbrush',
       dynamicTitle: true,
       items: [
-        { value: 'light', left: '☀️', title: 'Light mode' },
-        { value: 'dark', left: '🌙', title: 'Dark mode' },
+        {value: 'light', left: '☀️', title: 'Light mode'},
+        {value: 'dark', left: '🌙', title: 'Dark mode'},
       ],
     },
   },
 };
 
-export const decorators = [
-  withMuiTheme,
-];
+export const decorators = [withMuiTheme];

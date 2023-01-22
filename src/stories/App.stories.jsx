@@ -1,5 +1,4 @@
 import React from 'react';
-import { within, userEvent } from '@storybook/testing-library';
 
 import App from '../App';
 
@@ -12,7 +11,7 @@ export default {
   },
 };
 
-const Template = (args) => <App {...args} />;
+const Template = args => <App {...args} />;
 
 // More on interaction testing: https://storybook.js.org/docs/react/writing-tests/interaction-testing
 export const app = Template.bind({});
