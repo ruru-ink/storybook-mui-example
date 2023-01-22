@@ -10,6 +10,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint src -c .eslintrc.json --ext .js,.jsx,.ts,.tsx && prettier --check \"**/*.+(js|jsx|ts|tsx|json)\"",
     "lint-fix": "eslint src -c .eslintrc.json --ext .js,.jsx,.ts,.tsx --fix && prettier --check \"**/*.+(js|jsx|ts|tsx|json)\" --write",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "browserslist": {
     "production": [
