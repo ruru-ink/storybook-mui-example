@@ -1,0 +1,88 @@
+{
+  "extends": ["airbnb", "airbnb-typescript", "prettier"],
+  "plugins": ["eslint-plugin-simple-import-sort", "hooks", "import", "prefer-arrow"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@/components", "./src/components"]
+        ]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "import/no-unresolved": "error",
+    "react/function-component-definition": [2, {"namedComponents": "arrow-function"}],
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 160,
+        "tabWidth": 2,
+        "comments": 160,
+        "ignoreComments": false,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^react", "prop-types"],
+          ["^next"],
+          ["^@mui"],
+          ["^@?\\w"],
+          ["@/api/(.*)", "@/store/(.*)", "@/utilities/(.*)", "@/components/(.*)", "@/types/(.*)", "@/routes/(.*)", "@/theme/(.*)", "@/(.*)"],
+          ["^[./]"]
+        ]
+      }
+    ],
+    "hooks/sort": [
+      "warn",
+      {
+        "groups": ["useReducer", "useContext", "useState", "useRef", "useDispatch", "useCallback", "useEffect"]
+      }
+    ],
+    "prefer-arrow/prefer-arrow-functions": [
+      "error",
+      {
+        "disallowPrototype": true,
+        "singleReturnOnly": false,
+        "classPropertiesAllowed": false
+      }
+    ],
+    "prefer-arrow-callback": ["error", {"allowNamedFunctions": true}],
+    "func-style": ["error", "expression", {"allowArrowFunctions": true}]
+  },
+
+  "overrides": [
+    {
+      "files": ["**/*.stories.*"],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ]
+}

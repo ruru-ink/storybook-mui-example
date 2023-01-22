@@ -2,41 +2,14 @@
   "name": "storybook-mui-example",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@fontsource/material-icons": "^4.5.4",
-    "@fontsource/roboto": "^4.5.8",
-    "@mui/icons-material": "^5.10.6",
-    "@mui/material": "^5.10.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
+    "dev": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
+    "lint": "eslint src -c .eslintrc.json --ext .js,.jsx,.ts,.tsx && prettier --check \"**/*.+(js|jsx|ts|tsx|json)\"",
+    "lint-fix": "eslint src -c .eslintrc.json --ext .js,.jsx,.ts,.tsx --fix && prettier --check \"**/*.+(js|jsx|ts|tsx|json)\" --write",
   },
   "browserslist": {
     "production": [
@@ -50,27 +23,49 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@storybook/addon-actions": "^6.5.12",
-    "@storybook/addon-essentials": "^6.5.12",
-    "@storybook/addon-interactions": "^6.5.12",
-    "@storybook/addon-links": "^6.5.12",
-    "@storybook/builder-webpack5": "^6.5.12",
-    "@storybook/manager-webpack5": "^6.5.12",
-    "@storybook/node-logger": "^6.5.12",
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/material-icons": "^4.5.4",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.5",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/node-logger": "^6.5.15",
     "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.12",
+    "@storybook/react": "^6.5.15",
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^29.1.0",
-    "@types/node": "^18.7.23",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "babel-plugin-named-exports-order": "^0.0.2",
+    "@testing-library/user-event": "^14.4.3",
     "prop-types": "^15.8.1",
-    "typescript": "^4.8.4",
-    "webpack": "^5.74.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.6",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-hooks": "^0.4.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-simple-import-sort": "^9.0.0",
+    "prettier": "2.8.3",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0"
   }
 }
