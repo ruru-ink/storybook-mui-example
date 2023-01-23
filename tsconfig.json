@@ -25,6 +25,6 @@
       "@/components/*": ["./src/components/*"]
     }
   },
-  "include": ["./jest.*", "./webpack.*", "src/**/*"],
+  "include": ["./jest.*", "./craco.*", "src/**/*"],
   "exclude": ["node_modules", "src/**/*.spec.ts"]
 }

@@ -18,9 +18,7 @@
     },
     "import/resolver": {
       "alias": {
-        "map": [
-          ["@/components", "./src/components"]
-        ]
+        "map": [["@/components", "./src/components"]]
       },
       "typescript": {
         "alwaysTryTypes": true
