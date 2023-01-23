@@ -25,6 +25,6 @@
       "@/components/*": ["./src/components/*"]
     }
   },
-  "include": ["./jest.*", "./craco.*", "src/**/*"],
+  "include": ["./craco.*", "./jest.*", "src/**/*"],
   "exclude": ["node_modules", "src/**/*.spec.ts"]
 }
